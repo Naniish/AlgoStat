@@ -1,9 +1,10 @@
 <?php
 
+$timestart=microtime(true);
+
 function quick_sort($my_array)
  {
-	//$my_array = explode("; ",$liste[1]);
-	echo 'Série : '.explode(";",$my_array)."\n";
+	$comparaison = 0;
 	$loe = $gt = array();
 	if(count($my_array) < 2)
 	{
@@ -23,9 +24,15 @@ function quick_sort($my_array)
 	}
 	return array_merge(quick_sort($loe),array($pivot_key=>$pivot),quick_sort($gt));
 }
-quick_sort($argv[1]);
-
 //$my_array = array(3, 0, 2, 5, -1, 4, 1);
-/*echo 'Original Array : '.implode(',',$my_array).'\n';
+foreach ($argv as $arg){
+	$my_array = explode(";",$arg);
+}
+echo 'Série : '.implode(';',$my_array)."\n";
 $my_array = quick_sort($my_array);
-echo 'Sorted Array : '.implode(',',$my_array);*/
+echo 'Résultat : '.implode(',',$my_array)."\n";
+$timeend=microtime(true);
+$time=$timeend-$timestart;
+$page_load_time = number_format($time, 2);
+echo "Temps : " . $page_load_time . " sec";
+

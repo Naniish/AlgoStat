@@ -2,20 +2,16 @@
 
 $timestart=microtime(true);
 
-function quick_sort($liste)
+function quick_sort($my_array)
  {
-	$my_array = implode(",", $liste[1]);
+	$comparaison = 0;
 	$loe = $gt = array();
-	echo count($my_array);
-    
 	if(count($my_array) < 2)
 	{
 		return $my_array;
-    }
-    
+	}
 	$pivot_key = key($my_array);
-    $pivot = array_shift($my_array);
-    
+	$pivot = array_shift($my_array);
 	foreach($my_array as $val)
 	{
 		if($val <= $pivot)
@@ -25,19 +21,17 @@ function quick_sort($liste)
 		{
 			$gt[] = $val;
 		}
-    }
-	
-	echo "Série : ";
-	echo implode(',',quick_sort($my_array) )."\n";
-	echo array_merge(quick_sort($loe), array($pivot_key=>$pivot), quick_sort($gt));
-	return array_merge(quick_sort($loe), array($pivot_key=>$pivot), quick_sort($gt));
+	}
+	return array_merge(quick_sort($loe),array($pivot_key=>$pivot),quick_sort($gt));
 }
-quick_sort($argv);
-/*$my_array = array(1, -2, 3.5, 3, 4);
-echo 'Série : '.implode(',',$my_array)."\n";
+foreach ($argv as $arg){
+	$my_array = explode(";",$arg);
+}
+echo 'Série : '.implode(';',$my_array)."\n";
 $my_array = quick_sort($my_array);
 echo 'Résultat : '.implode(',',$my_array)."\n";
 $timeend=microtime(true);
 $time=$timeend-$timestart;
 $page_load_time = number_format($time, 2);
-echo "Temps : " . $page_load_time . " sec";*/
+echo "Temps : " . $page_load_time . " sec";
+
