@@ -4,8 +4,9 @@ $timestart=microtime(true);
 
 function quick_sort($liste)
  {
-	$my_array = explode(";", $liste[1]);
-    $loe = $gt = array();
+	$my_array = implode(",", $liste[1]);
+	$loe = $gt = array();
+	echo count($my_array);
     
 	if(count($my_array) < 2)
 	{
@@ -27,7 +28,8 @@ function quick_sort($liste)
     }
 	
 	echo "Série : ";
-	echo implode(',',$my_array )."\n";
+	echo implode(',',quick_sort($my_array) )."\n";
+	echo array_merge(quick_sort($loe), array($pivot_key=>$pivot), quick_sort($gt));
 	return array_merge(quick_sort($loe), array($pivot_key=>$pivot), quick_sort($gt));
 }
 quick_sort($argv);
