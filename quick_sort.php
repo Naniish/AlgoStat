@@ -5,6 +5,7 @@ $timestart=microtime(true);
 function quick_sort($my_array)
  {
 	$comparaison = 0;
+	//nos sous tableaux
 	$loe = $gt = array();
 	if(count($my_array) < 2)
 	{

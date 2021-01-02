@@ -4,6 +4,7 @@ $timestart=microtime(true);
 
 function merge_sort($liste){
 	$my_array = explode(";", $liste[1]);
+	echo count($my_array);
 	if(count($my_array) == 1 ) return $my_array;
 	$mid = count($my_array) / 2;
     $left = array_slice($my_array, 0, $mid);
