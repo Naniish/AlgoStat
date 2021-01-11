@@ -7,13 +7,8 @@ function selection_sort($liste)
 	$comparaison = 0;
 	$itération = 0;
 	$taille = count($arrayOf);
-	echo "Série : ";
-	for($K = 0; $K < $taille; $K++) {
-		 echo  $arrayOf[$K].", ";
-		 $comparaison++;
-		 $itération++;
-	}
-	echo "\n";
+	echo 'Série : '.implode(';',$arrayOf)."\n";
+
 	for($i=0;$i<$taille-1;$i++)
 	{
 		$comparaison++;
@@ -41,13 +36,7 @@ function selection_sort($liste)
 			$arrayOf[$i] = $minV;
 		}
 	}
-	echo "Resultat : ";
-	for ($L = 0; $L < $taille; $L++) {
-         echo $arrayOf[$L].", ";
-		 $comparaison++;
-		 $itération++;
-	}
-	echo "\n";
+	echo 'Résultat : '.implode(';',$arrayOf)."\n";
 	echo "Nb Comparaison : ";
     echo $comparaison;
 	echo "\n";

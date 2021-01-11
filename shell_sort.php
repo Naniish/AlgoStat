@@ -4,17 +4,11 @@ function shell_sort($liste)
 {
 	$timestart=microtime(true);
 	$my_array = explode(";", $liste[1]);
-	echo $my_array;
 	$comparaison = 0;
 	$itération = 0;
 	$taille = count($my_array);
-	echo "Série : ";
-	for($K = 0; $K < $taille; $K++) {
-		 echo  $my_array[$K].", ";
-		 $comparaison++;
-		 $itération++;
-	}
-	echo "\n";
+	echo 'Série : '.implode(';',$my_array)."\n";
+
 	//divise notre tableau et arondi à virgule flottant si besoin
     $x = round(count($my_array)/2);
 	while($x > 0)
@@ -44,13 +38,7 @@ function shell_sort($liste)
 		$x = round($x/2.2);
 	}
 
-	echo "Resultat : ";
-	for($L = 0; $L < $taille; $L++) {
-		  echo $my_array[$L].", ";
-		  $comparaison++;
-		  $itération++;
-	}
-	echo "\n";
+	echo 'Résultat : '.implode(';',$my_array)."\n";
 	echo "Nb Comparaison : ";
     echo $comparaison;
 	echo "\n";

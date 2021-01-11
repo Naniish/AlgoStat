@@ -7,13 +7,14 @@ function insertion_sort($tableau)
 	$itération = 0;
     $liste = explode(";", $tableau[1]);
     $taille = count($liste);
-	echo "Série:";
+    echo 'Série : '.implode(';',$liste)."\n";
+	/*echo "Série:";
 	for ($i = 0; $i < $taille; $i++) {
         echo  $liste[$i].", ";
         $comparaison++;
 		$itération++;
     }
-    echo "\n";
+    echo "\n";*/
 	
     for($i = 0; $i < $taille; $i++)
     {
@@ -37,13 +38,13 @@ function insertion_sort($tableau)
 		$liste[$i] = $element_a_inserer;
 	}
 
-	echo "Resultat:";
+    echo 'Résultat : '.implode(';',$liste)."\n";
+	/*echo "Resultat:";
 	for ($L = 0; $L < $taille; $L++) {
          echo $liste[$L].", ";
          $comparaison++;
 		 $itération++;
-    }
-    echo "\n";
+    }*/
 	echo "Nb Comparaison : ";
     echo $comparaison;
 	echo "\n";

@@ -6,13 +6,7 @@ function selection_sort($liste)
 	$Tableau = explode(";", $liste[1]);
 	$itération = 0;
 	$comparaison = 0;
-	echo "Série:";
-	for($K = 0; $K < count($Tableau); $K++) {
-		 echo  $Tableau[$K].", ";
-		 $comparaison++;
-		 $itération++;
-	}
-	echo "\n";
+	echo 'Série : '.implode(';',$Tableau)."\n";
 	//compare à chaque fois deux elemnts consecutifs puis tri 
 	for($I = count($Tableau) - 2; $I >= 0; $I--) {
 		$comparaison++;
@@ -29,12 +23,7 @@ function selection_sort($liste)
  		}
 	}
  
-	echo "Resultat : ";
-	for($L = 0; $L < count($Tableau); $L++) {
-		  echo $Tableau[$L].", ";
-		  $comparaison++;
-		  $itération++;
-	}
+	echo 'Résultat : '.implode(';',$Tableau)."\n";
 	echo "\n";
 	echo "Nb Comparaison : ";
     echo $comparaison;
