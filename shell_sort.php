@@ -39,7 +39,7 @@ function shell_sort($liste)
 	}
 
 	echo 'Résultat : '.implode(';',$my_array)."\n";
-	echo "Nb Comparaison : ";
+	echo "Nb de comparaison : ";
     echo $comparaison;
 	echo "\n";
 	echo "Nb d'itération : ";
@@ -48,7 +48,7 @@ function shell_sort($liste)
 	$timeend=microtime(true);
 	$time=$timeend-$timestart;
 	$page_load_time = number_format($time, 2);
-	echo "Temps " . $page_load_time . " sec";
+	echo "Temps (sec) " . $page_load_time . " sec";
 
 	return $my_array;
 }

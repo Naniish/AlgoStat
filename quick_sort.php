@@ -34,5 +34,5 @@ echo 'Résultat : '.implode(',',$my_array)."\n";
 $timeend=microtime(true);
 $time=$timeend-$timestart;
 $page_load_time = number_format($time, 2);
-echo "Temps : " . $page_load_time . " sec";
+echo "Temps (sec) : " . $page_load_time . " sec";
 
