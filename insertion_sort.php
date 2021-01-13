@@ -39,12 +39,16 @@ function insertion_sort($tableau)
 	}
 
     echo 'Résultat : '.implode(';',$liste)."\n";
-	/*echo "Resultat:";
+	/*echo "Resultat : ";
 	for ($L = 0; $L < $taille; $L++) {
-         echo $liste[$L].", ";
-         $comparaison++;
-		 $itération++;
-    }*/
+        for ($l = 0; $l < $taille; $l++) {
+            if($l == $liste[$L]){
+                //$newList[$x] == $liste[$L++]
+                echo $liste[$L++]."; ";
+            }
+        }
+    }
+    echo "\n";*/
 	echo "Nb Comparaison : ";
     echo $comparaison;
 	echo "\n";
