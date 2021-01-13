@@ -33,3 +33,7 @@ Conclusion
 
 Nous pouvons conclure en affirmant que l’efficacité, l’optimisation d’un tri est caractérisée par sa complexité, son temps d’exécuté et l’efficacité de la technique de l’algorithme.
 
+
+Je voulais rejouter que j'ai réalisé se projet toute seule, personne n'a pu rentrer en contact avec mon binome. De plus j'ai fini le projet assez tot et j'ai demander une demande de validation il y'a plus d'un mois sans reponse. J'ai ouvert un ticket pour expriquer le problème mais je n'ai eu aucune reponse. Ce n'est que 4 jour avant le dateline que la moulinnette est passée en m'indiquand des erreurs que je ne comprennait pas parce que mes codes faisaient bien les trie. J'ai alors ecris une fois de plus à un pédagogue et ouvert un autre ticket sans reponse.
+Il a été vraiment penible de réaliser ce projet surtout sans suivi. 
+
