@@ -14,7 +14,8 @@ function quick_sort($my_array)
 	$pivot_key = key($my_array);
 	$pivot = array_shift($my_array);
 	foreach($my_array as $val)
-	{
+	{	
+		$comparaison++;
 		if($val <= $pivot)
 		{
 			$loe[] = $val;
@@ -25,12 +26,14 @@ function quick_sort($my_array)
 	}
 	return array_merge(quick_sort($loe),array($pivot_key=>$pivot),quick_sort($gt));
 }
+//quick_sort($argv);
 foreach ($argv as $arg){
 	$my_array = explode(";",$arg);
 }
 echo 'Série : '.implode(';',$my_array)."\n";
 $my_array = quick_sort($my_array);
-echo 'Résultat : '.implode(',',$my_array)."\n";
+echo 'Résultat : '.implode(';',$my_array)."\n";
+//echo "Nb de comparaison : " .$comparaison. "\n";
 $timeend=microtime(true);
 $time=$timeend-$timestart;
 $page_load_time = number_format($time, 2);

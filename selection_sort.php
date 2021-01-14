@@ -18,8 +18,6 @@ function selection_sort($liste)
 		$minV = $arrayOf[$min];
 		for($j=$i+1;$j<$taille;$j++)
 		{
-			$comparaison++;
-			$itération++;
 			// on repart du second puis on compare s'il est plus petit on echange
 			if($arrayOf[$j] < $minV)
 			{
