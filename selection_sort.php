@@ -23,7 +23,6 @@ function selection_sort($liste)
 			// on repart du second puis on compare s'il est plus petit on echange
 			if($arrayOf[$j] < $minV)
 			{
-				$comparaison++;
 				$min = $j;
 				$minV = $arrayOf[$min];
 			}
@@ -31,7 +30,6 @@ function selection_sort($liste)
 	
 		if($min != $i)
 		{
-			$comparaison++;
 			$arrayOf[$min] = $arrayOf[$i];
 			$arrayOf[$i] = $minV;
 		}
