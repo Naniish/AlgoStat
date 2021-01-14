@@ -35,4 +35,4 @@ selection_sort($argv);
 $timeend=microtime(true);
 $time=$timeend-$timestart;
 $page_load_time = number_format($time, 2);
-echo "Temps (sec) : " . $page_load_time;
+echo "Temps (sec) : " . $page_load_time. "\n";
