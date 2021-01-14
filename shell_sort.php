@@ -48,7 +48,7 @@ function shell_sort($liste)
 	$timeend=microtime(true);
 	$time=$timeend-$timestart;
 	$page_load_time = number_format($time, 2);
-	echo "Temps (sec) " . $page_load_time . " sec";
+	echo "Temps (sec) : " . $page_load_time;
 
 	return $my_array;
 }
